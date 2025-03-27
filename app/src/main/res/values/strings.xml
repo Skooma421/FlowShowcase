@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FlowShowcase</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="counter">Counter</string>
+    <string name="click_me">Click me!</string>
+    <string name="todolist_fragment">toDoList Fragment</string>
+    <string name="typing_fragment">Typing fragment</string>
+</resources>

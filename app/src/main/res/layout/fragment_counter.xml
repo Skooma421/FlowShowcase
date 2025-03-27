@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CounterFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/counterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:text="@string/counter"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/countAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="@id/counterTitle"
+        app:layout_constraintStart_toStartOf="@id/counterTitle"
+        app:layout_constraintTop_toBottomOf="@id/counterTitle"
+        tools:text="77" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/countButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/click_me"
+        app:layout_constraintEnd_toEndOf="@id/countAmount"
+        app:layout_constraintStart_toStartOf="@id/countAmount"
+        app:layout_constraintTop_toBottomOf="@id/countAmount" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/typingFragmentButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/typing_fragment"
+        app:layout_constraintEnd_toStartOf="@id/listFragmentButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/listFragmentButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/todolist_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/typingFragmentButton"
+        app:layout_constraintTop_toBottomOf="@id/countButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
