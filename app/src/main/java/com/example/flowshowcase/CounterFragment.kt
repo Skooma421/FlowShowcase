@@ -11,7 +11,7 @@ import com.example.flowshowcase.databinding.FragmentCounterBinding
 import kotlinx.coroutines.launch
 
 class CounterFragment : BaseFragment<FragmentCounterBinding>(FragmentCounterBinding::inflate) {
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: CountViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
