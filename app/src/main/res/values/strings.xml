@@ -7,4 +7,6 @@
     <string name="todolist_fragment">toDoList Fragment</string>
     <string name="typing_fragment">Typing fragment</string>
     <string name="task_title">Task title</string>
+    <string name="begin_typing">Begin typing</string>
+    <string name="typing_page">Typing Page</string>
 </resources>
