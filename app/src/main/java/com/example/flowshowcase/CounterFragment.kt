@@ -16,24 +16,26 @@ class CounterFragment : BaseFragment<FragmentCounterBinding>(FragmentCounterBind
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewLifecycleOwner.lifecycleScope.launch{
-            repeatOnLifecycle(Lifecycle.State.STARTED){
-                viewModel.count.collect {count ->
-                    binding.countAmount.text = count.toString()
+        binding?.let { binding ->
+            viewLifecycleOwner.lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    viewModel.count.collect { count ->
+                        binding.countAmount.text = count.toString()
+                    }
                 }
             }
-        }
 
-        binding.typingFragmentButton.setOnClickListener{
-            findNavController().navigate(R.id.action_counterFragment_to_typingFragment)
-        }
+            binding.typingFragmentButton.setOnClickListener {
+                findNavController().navigate(R.id.action_counterFragment_to_typingFragment)
+            }
 
-        binding.listFragmentButton.setOnClickListener{
-            findNavController().navigate(R.id.action_counterFragment_to_listFragment)
-        }
+            binding.listFragmentButton.setOnClickListener {
+                findNavController().navigate(R.id.action_counterFragment_to_listFragment)
+            }
 
-        binding.countButton.setOnClickListener{
-            viewModel.addCount()
+            binding.countButton.setOnClickListener {
+                viewModel.addCount()
+            }
         }
     }
 }

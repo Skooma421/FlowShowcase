@@ -6,6 +6,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flowshowcase.databinding.FragmentListBinding
 import kotlinx.coroutines.launch
@@ -22,9 +23,13 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::infl
             viewModel.removeTask(taskId)
         }
 
-        binding.recyclerView.apply{
+        binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = this@ListFragment.adapter
+        }
+
+        binding.typingFragmentButton.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_typingFragment)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {

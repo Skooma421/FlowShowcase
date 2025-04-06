@@ -14,7 +14,7 @@ class TypingViewModel : ViewModel() {
 
     private var typingJob: Job? = null
 
-    fun userTyping(){
+    fun userTyping() {
         _isTyping.tryEmit(true)
 
         typingJob?.cancel()

@@ -9,4 +9,7 @@
     <string name="task_title">Task title</string>
     <string name="begin_typing">Begin typing</string>
     <string name="typing_page">Typing Page</string>
+    <string name="typing">Typing. . .</string>
+    <string name="task_list_fragment">Task List Fragment</string>
+    <string name="counter_fragment">Counter Fragment</string>
 </resources>

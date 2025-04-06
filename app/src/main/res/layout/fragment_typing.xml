@@ -1,31 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TypingFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/typingTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
         android:text="@string/typing_page"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="95dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/typingField"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@id/typingTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="65dp"
         android:background="@color/white"
         android:hint="@string/begin_typing"
-        />
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typingTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/typingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:text="@string/typing"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/typingField"
+        app:layout_constraintStart_toStartOf="@id/typingField"
+        app:layout_constraintTop_toBottomOf="@id/typingField" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/counterFragmentButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/counter_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/listFragmentButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typingField" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/listFragmentButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/todolist_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/counterFragmentButton"
+        app:layout_constraintTop_toBottomOf="@id/typingField" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
